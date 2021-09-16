@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         Finn Elliott
         <form data-splitbee-event="Submit Newsletter Form">
           <input name="email" type="email" />
-          <button type="submit">Submit</button>
+          <button onSubmit={(e)=>e.preventDefault()} type="submit">Submit</button>
         </form>
       </main>
 
