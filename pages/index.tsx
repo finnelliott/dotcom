@@ -20,7 +20,6 @@ const Home: NextPage = () => {
           <SimpleHeading content="Read" />
           <BlogPostGrid />
           <div className="h-10"></div>
-          <SimpleHeading content="Subscribe" />
           <SignUpForm />
         </PrimaryLayout>
       </main>

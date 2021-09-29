@@ -4,6 +4,7 @@ import BlogPostPreview from './BlogPostPreview'
 
 const posts = [
   {
+    slug: 'about',
     title: 'Why we need to address cryptocurrency policy in the UK',
     description: 'I release a newsletter once a month, which distils hot topics and difficult concepts from across the tech world.',
     tags: ['Web3', 'Ethereum', 'UK'],
@@ -17,7 +18,7 @@ const posts = [
 
 export default function BlogPostGrid() {
   return (
-    <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       {posts.map((post) => (
         <li
         key={post.title}

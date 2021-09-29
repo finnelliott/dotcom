@@ -1,3 +1,5 @@
+import SimpleHeading from "../headings/SimpleHeading";
+
 /*
   This example requires Tailwind CSS v2.0+ 
   
@@ -19,6 +21,7 @@ export default function SignUpForm() {
       <div className="">
         <div className="lg:flex lg:items-center">
           <div className="lg:w-0 lg:flex-1">
+            <SimpleHeading content="Subscribe" />
             <p className="max-w-3xl text-sm text-gray-500">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt amet
               fugiat veniam occaecat fugiat.

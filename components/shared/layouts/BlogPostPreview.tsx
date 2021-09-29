@@ -1,26 +1,31 @@
 import { MailIcon, PhoneIcon } from "@heroicons/react/outline"
 import { FC } from "react"
 import Image from 'next/image'
+import Link from 'next/link'
 
 type PostProps = {
     post : {
+        slug: string;
         title?: string;
         description?: string;
         tags?: string[];
         date?: string;
         reading_time?: string;
-        image_url?: string;
+        image_url: string;
     }
 }
 
 const BlogPostPreview: FC<PostProps> = ({ post }) => {
     return (
-      <div
-      className="col-span-1 flex flex-col text-left bg-white rounded-lg shadow divide-y divide-gray-200 overflow-hidden"
+      <Link
+        href={`/${post.slug}`}
+      >
+      <a
+      className="col-span-1 flex flex-col text-left bg-white border border-gray-200 bg-clip-border rounded-lg shadow divide-y divide-gray-200 overflow-hidden hover:bg-gray-50 hover:shadow-lg transition-shadow"
       >
         <div className="flex-1 flex flex-col">
           <div className="relative h-48">
-            <Image className="h-48 w-full overflow-hidden" objectFit="cover" src={`${post.image_url}`} layout="fill" alt="" />
+            <Image className="h-48 w-full overflow-hidden" objectFit="cover" src={post.image_url} layout="fill" alt="" />
           </div>
           <div className="flex-1 flex flex-col p-4">
           <h3 className="text-gray-900 text-lg font-semibold">{post.title}</h3>
@@ -44,7 +49,8 @@ const BlogPostPreview: FC<PostProps> = ({ post }) => {
             ))}
           </span>
         </div>
-      </div>
+      </a>
+      </Link>
     )
 }
 
