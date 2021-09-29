@@ -1,6 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import SimpleHeading from '../ components/shared/headings/SimpleHeading'
+import BlogPostGrid from '../ components/shared/layouts/BlogPostGrid'
+import PrimaryLayout from '../ components/shared/layouts/PrimaryLayout'
+import SignUpForm from '../ components/shared/newsletter/SignUpForm'
 
 const Home: NextPage = () => {
   return (
@@ -12,11 +16,13 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1 style={{fontFamily: "Organetto"}}>Finn Elliott</h1>
-        <form onSubmit={(e)=>e.preventDefault()} data-splitbee-event="Submit Newsletter Form">
-          <input name="email" type="email" />
-          <button type="submit">Submit</button>
-        </form>
+        <PrimaryLayout>
+          <SimpleHeading content="Read" />
+          <BlogPostGrid />
+          <div className="h-10"></div>
+          <SimpleHeading content="Subscribe" />
+          <SignUpForm />
+        </PrimaryLayout>
       </main>
 
       <footer>
