@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import SimpleHeading from '../ components/shared/headings/SimpleHeading'
-import BlogPostGrid from '../ components/shared/layouts/BlogPostGrid'
-import PrimaryLayout from '../ components/shared/layouts/PrimaryLayout'
-import SignUpForm from '../ components/shared/newsletter/SignUpForm'
+import SimpleHeading from '../components/shared/headings/SimpleHeading'
+import BlogPostGrid from '../components/shared/layouts/BlogPostGrid'
+import PrimaryLayout from '../components/shared/layouts/PrimaryLayout'
+import SignUpForm from '../components/shared/newsletter/SignUpForm'
 
 const Home: NextPage = () => {
   return (
