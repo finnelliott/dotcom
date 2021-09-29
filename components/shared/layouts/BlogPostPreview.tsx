@@ -19,12 +19,14 @@ const BlogPostPreview: FC<PostProps> = ({ post }) => {
       className="col-span-1 flex flex-col text-left bg-white rounded-lg shadow divide-y divide-gray-200 overflow-hidden"
       >
         <div className="flex-1 flex flex-col">
-          <Image className="h-32 flex-shrink-0 mx-auto w-full" src={`${post.image_url}`} layout="fill" alt="" />
+          <div className="relative h-48">
+            <Image className="h-48 w-full overflow-hidden" objectFit="cover" src={`${post.image_url}`} layout="fill" alt="" />
+          </div>
           <div className="flex-1 flex flex-col p-4">
           <h3 className="text-gray-900 text-lg font-semibold">{post.title}</h3>
           <dl className="mt-1 flex-grow flex flex-col justify-between">
             <dt className="sr-only">description</dt>
-            <dd className="text-gray-500 text-sm">{post.description}</dd>
+            <dd className="text-gray-500 text-sm md:text-md">{post.description}</dd>
             <dt className="sr-only">Role</dt>
             <dd className="mt-3">
               <span className="text-gray-400 text-xs space-x-2 flex ">
