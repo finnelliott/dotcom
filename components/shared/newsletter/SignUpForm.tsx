@@ -38,7 +38,7 @@ export default function SignUpForm() {
                 type="email"
                 autoComplete="email"
                 required
-                className="w-full px-5 py-3 border border-gray-300 shadow-sm placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs rounded-md"
+                className="w-full px-5 py-3 border border-transparent shadow-sm placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-600 sm:max-w-xs rounded-md"
                 placeholder="Enter your email"
               />
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
