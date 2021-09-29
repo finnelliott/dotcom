@@ -15,7 +15,9 @@ type PostProps = {
 
 const BlogPostPreview: FC<PostProps> = ({ post }) => {
     return (
-      <>
+      <div
+      className="col-span-1 flex flex-col text-left bg-white rounded-lg shadow divide-y divide-gray-200 overflow-hidden"
+      >
         <div className="flex-1 flex flex-col">
           <Image className="h-32 flex-shrink-0 mx-auto w-full" src={`${post.image_url}`} layout="fill" alt="" />
           <div className="flex-1 flex flex-col p-4">
@@ -27,7 +29,7 @@ const BlogPostPreview: FC<PostProps> = ({ post }) => {
             <dd className="mt-3">
               <span className="text-gray-400 text-xs space-x-2 flex ">
                 {post.tags?.map((tag) => (
-                    <div className="py-1 px-2 border border-gray-400 rounded-md w-min text-sm">{tag}</div>
+                    <div key={tag} className="py-1 px-2 border border-gray-400 rounded-md w-min text-sm">{tag}</div>
                 ))}
               </span>
             </dd>
@@ -41,7 +43,7 @@ const BlogPostPreview: FC<PostProps> = ({ post }) => {
             <span className="ml-3">{post.reading_time}{` `}min read</span>
           </div>
         </div>
-      </>
+      </div>
     )
 }
 

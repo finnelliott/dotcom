@@ -20,12 +20,10 @@ export default function BlogPostGrid() {
     <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {posts.map((post) => (
         <li
-          key={post.title}
-          className="col-span-1 flex flex-col text-left bg-white rounded-lg shadow divide-y divide-gray-200 overflow-hidden"
+        key={post.title}
         >
           <BlogPostPreview post={post} />
         </li>
-          
       ))}
     </ul>
   )
