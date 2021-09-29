@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "Organetto";
+  src: url("/fonts/Organetto/Organetto-UltraBoldSemiExp.ttf");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}

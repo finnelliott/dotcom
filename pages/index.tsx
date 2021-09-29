@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        Finn Elliott
+        <h1 style={{fontFamily: "Organetto"}}>Finn Elliott</h1>
         <form onSubmit={(e)=>e.preventDefault()} data-splitbee-event="Submit Newsletter Form">
           <input name="email" type="email" />
           <button type="submit">Submit</button>
