@@ -16,7 +16,7 @@
 */
 export default function SignUpForm() {
     return (
-      <div className="bg-white">
+      <div className="">
         <div className="lg:flex lg:items-center">
           <div className="lg:w-0 lg:flex-1">
             <p className="max-w-3xl text-sm text-gray-500">
