@@ -1,5 +1,6 @@
 import { MailIcon, PhoneIcon } from "@heroicons/react/outline"
 import { FC } from "react"
+import Image from 'next/image'
 
 type PostProps = {
     post : {
@@ -14,12 +15,9 @@ type PostProps = {
 
 const BlogPostPreview: FC<PostProps> = ({ post }) => {
     return (
-        <li
-        key={post.date}
-        className="col-span-1 flex flex-col text-left bg-white rounded-lg shadow divide-y divide-gray-200 overflow-hidden"
-      >
+      <>
         <div className="flex-1 flex flex-col">
-          <img className="h-32 flex-shrink-0 mx-auto w-full" src={post.image_url} alt="" />
+          <Image className="h-32 flex-shrink-0 mx-auto w-full" src={`${post.image_url}`} layout="fill" alt="" />
           <div className="flex-1 flex flex-col p-4">
           <h3 className="text-gray-900 text-lg font-semibold">{post.title}</h3>
           <dl className="mt-1 flex-grow flex flex-col justify-between">
@@ -43,7 +41,7 @@ const BlogPostPreview: FC<PostProps> = ({ post }) => {
             <span className="ml-3">{post.reading_time}{` `}min read</span>
           </div>
         </div>
-      </li>
+      </>
     )
 }
 
