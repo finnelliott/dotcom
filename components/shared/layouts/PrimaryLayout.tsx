@@ -36,7 +36,7 @@ type Props = {
 const PrimaryLayout:FC<Props> = ({children}) => {
   return (
     // <div className="min-h-screen bg-gradient-to-tl from-viceRose50 via-viceBlue50 to-viceWhite50 backdrop-blur-lg">
-    <div className="min-h-screen" style={{background: "radial-gradient(circle at bottom right, rgba(251, 113, 133, 0.5) 0%, rgba(191, 219, 254, 0.5) 25%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 100%), #FFFFFF;", backgroundAttachment: "fixed"}} >
+    <div className="min-h-screen" style={{background: "radial-gradient(circle at bottom right, rgba(251, 113, 133, 0.5) 0%, rgba(191, 219, 254, 0.5) 25%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 100%), #FFFFFF;"}} >
       <Disclosure as="nav" className="">
         {({ open }: OpenProps) => (
           <>
